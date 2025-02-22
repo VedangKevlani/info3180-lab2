@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/app.css') }}">
+</head>
+<body>
+    {% extends "base.html" %}
+
+    {% block main %}
+    <div class="profile-container">
+        <div class="profile-header">
+            <img src="{{ user.profile_image }}" alt="this is a profile image">
+            <h2 class="full_name">{{ user.full_name }}</h2>
+            <p class="username">{{ user.username }}</p>
+            <p class="location"><i class="fas fa-map-marker-alt"></i>{{ user.location }}</p>
+            <p class="date-joined">Joined: {{ user.date_joined }}</p>
+        </div>
+        <div class="profile-content">
+            <div class="short-bio">
+                <p>{{ user.bio }}</p>
+            </div>
+            <div class="social-stats">
+                <span><strong>{{ user.posts }}</strong><br>Posts</span>
+                <span><strong>{{ user.following }}</strong><br>Following</span>
+                <span><strong>{{ user.followers }}</strong><br>Followers</span>
+            </div>
+            <button class="follow-button"><strong>Follow</strong></button>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>

@@ -1,3 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    padding-top: 5rem;
+    /* padding-top: 5rem; */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(0,0,0);
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+}
+
+.profile-container {
+    width: 100%;
+    background-color: rgb(255,255,255);
+    overflow: hidden;
+    border-radius: 1em;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1em;
+}
+
+.profile-header {
+    padding: 3em 0;
+    background-image: linear-gradient(70deg, #61a1dd, #0083fd);
+    color: rgb(255, 255, 255);
+}
+
+.profile-header img {
+    width: 7em;
+    height: 7em;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-content {
+    color: #565656;
+    padding: 2.2em;
+}
+
+.username {
+    color: #ffffff;
+}
+
+.location, .date_joined {
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.social-stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.social-stats span {
+    font-size: 14px;
+}
+
+.short-bio {
+    margin-bottom: 1.8em;
+}
+
+.follow-button {
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgb(10, 177, 10);
+    color: rgb(255,255,255);
+}
+
+.follow-button:hover {
+    background-color: rgba(45, 71, 5, 0.822);
 }
